@@ -348,7 +348,7 @@ class AdminPlugin(Star):
             await client.set_group_special_title(
                 group_id=int(group_id),
                 user_id=int(tid),
-                special_title=new_title,
+                special_title=str(new_title),
                 duration=-1,
             )
 
@@ -371,7 +371,7 @@ class AdminPlugin(Star):
         await client.set_group_special_title(
             group_id=int(group_id),
             user_id=int(send_id),
-            special_title=new_title,
+            special_title=str(new_title),
             duration=-1,
         )
         yield event.plain_result(f"已将你的头衔改为【{new_title}】")
